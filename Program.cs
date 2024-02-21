@@ -8,7 +8,8 @@ namespace _13
     {
         static void Main(string[] args)
         {
-            ArrayList list = new ArrayList();
+            try {
+                ArrayList list = new ArrayList();
             list.Add(4.5); list.Add(18);
             list.AddRange(new string[] { "Студент", "Петров" });
             ArrayList newList = new ArrayList();
@@ -24,6 +25,10 @@ namespace _13
             foreach (var item in newList)
             {
                 Console.WriteLine(item);
+            }
+            }catch (Exception ex)
+            {
+                Console.Writeline("ex.Message")
             }
             Console.Read();
         }
